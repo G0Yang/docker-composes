@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  geth:
+    image: ethereum/client-go:latest
+    container_name: geth
+    restart: always
+    ports:
+      - "8545:8545"
+      - "30303:30303"
+    command: --syncmode "light" --mainnet --port 30303 --http --http.addr 0.0.0.0 --http.port 8545 --ws --ws.addr 0.0.0.0 --allow-insecure-unlock
+
+  geth_goerli:
+    image: ethereum/client-go:latest
+    container_name: geth_goerli
+    restart: always
+    ports:
+      - "8546:8546"
+      - "30304:30304"
+    command: --syncmode "light" --goerli --port 30304 --http --http.addr 0.0.0.0 --http.port 8546 --ws --ws.addr 0.0.0.0 --allow-insecure-unlock
+
+  geth_rinkeby:
+    image: ethereum/client-go:latest
+    container_name: geth_rinkeby
+    restart: always
+    ports:
+      - "8547:8547"
+      - "30305:30305"
+    command: --syncmode "light" --rinkeby --port 30305 --http --http.addr 0.0.0.0 --http.port 8547 --ws --ws.addr 0.0.0.0 --allow-insecure-unlock
+
+  geth_ropsten:
+    image: ethereum/client-go:latest
+    container_name: geth_ropsten
+    restart: always
+    ports:
+      - "8548:8548"
+      - "30306:30306"
+    command: --syncmode "light" --ropsten --port 30306 --http --http.addr 0.0.0.0 --http.port 8548 --ws --ws.addr 0.0.0.0 --allow-insecure-unlock

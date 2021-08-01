@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  qbittorrent:
+    image: ghcr.io/linuxserver/qbittorrent
+    container_name: dalso-qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Seoul
+      - UMASK_SET=022
+      - WEBUI_PORT=8080
+    volumes:
+      - ./downloads:/downloads
+      - ./config:/config
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 8080:8080
+    restart: always

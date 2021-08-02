@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  youtube-dl:
+    image: youtube-dl
+    container_name: youtube-dl
+    volumes:
+      - .:/media
+    restart: always

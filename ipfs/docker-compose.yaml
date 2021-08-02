@@ -2,7 +2,7 @@ version: '3.8'
 services:
   ipfs:
     image: ipfs/go-ipfs:latest
-    container_name: go-ipfs
+    container_name: ipfs
     environment:
       - IPFS_PROFILE=server
       - IPFS_PATH=/ipfs
@@ -11,12 +11,11 @@ services:
     restart: always
     ports:
       - "4001:4001"
-      - "5001:5001"
       - "8080:8080"
 
   ipfs_private:
     image: ipfs/go-ipfs:latest
-    container_name: go-ipfs-private
+    container_name: ipfs-private
     environment:
       - IPFS_PROFILE=server
       - IPFS_PATH=/ipfs_private

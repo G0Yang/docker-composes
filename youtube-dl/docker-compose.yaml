@@ -4,5 +4,5 @@ services:
     image: youtube-dl
     container_name: youtube-dl
     volumes:
-      - .:/media
+      - ./containers/media:/media
     restart: always

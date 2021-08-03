@@ -1,1 +1,12 @@
 .idea
+
+gitlab/containers
+
+ipfs/containers
+
+nginx/containers
+nginx/nginx.conf
+
+qbitTorrent/containers
+
+youtube-dl/containers

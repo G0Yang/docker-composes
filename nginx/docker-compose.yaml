@@ -5,10 +5,10 @@ services:
     image: nginx
     container_name: nginx_service
     volumes:
-      - ../volumes-nginx:/etc/nginx/conf.d
-      - ../volumes/.static_root/:/static/
-      - ../volumes/certbot/conf:/etc/letsencrypt
-      - ../volumes/certbot/www:/var/www/certbot
+      - ./containers/volumes-nginx:/etc/nginx/conf.d
+      - ./containers/.static_root/:/static/
+      - ./containers/certbot/conf:/etc/letsencrypt
+      - ./containers/certbot/www:/var/www/certbot
     ports:
       - "80:80"
       - "443:443"
@@ -20,6 +20,6 @@ services:
     image: certbot/certbot
     container_name: certbot_service
     volumes :
-      - ../volumes/certbot/conf:/etc/letsencrypt
-      - ../volumes/certbot/www:/var/www/certbot
+      - ./containers/certbot/conf:/etc/letsencrypt
+      - ./containers/certbot/www:/var/www/certbot
     entrypoint : "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"

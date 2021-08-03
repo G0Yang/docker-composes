@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  web:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    container_name: gitlab
+    ports:
+      - '10080:80'
+      - '10443:443'
+      - '10022:22'
+    volumes:
+      - './containers/config:/etc/gitlab'
+      - './containers/logs:/var/log/gitlab'
+      - './containers/data:/var/opt/gitlab'
+      - './containers/backups:/var/opt/gitlab/backups' # 백업 폴더 추가

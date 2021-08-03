@@ -10,10 +10,10 @@ services:
       - UMASK_SET=022
       - WEBUI_PORT=8080
     volumes:
-      - ./downloads:/downloads
-      - ./config:/config
+      - ./containers/downloads:/downloads
+      - ./containers/config:/config
     ports:
       - 6881:6881
       - 6881:6881/udp
-      - 8080:8080
+      - 8083:8080
     restart: always

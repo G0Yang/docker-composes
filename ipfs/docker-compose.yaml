@@ -7,11 +7,11 @@ services:
       - IPFS_PROFILE=server
       - IPFS_PATH=/ipfs
     volumes:
-      - ./ipfs:/ipfs
+      - ./containers/ipfs:/ipfs
     restart: always
     ports:
       - "4001:4001"
-      - "8080:8080"
+      - "8081:8080"
 
   ipfs_private:
     image: ipfs/go-ipfs:latest
@@ -20,5 +20,5 @@ services:
       - IPFS_PROFILE=server
       - IPFS_PATH=/ipfs_private
     volumes:
-      - ./ipfs_private:/ipfs_private
+      - ./containers/ipfs_private:/ipfs_private
     restart: always

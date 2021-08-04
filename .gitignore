@@ -4,8 +4,10 @@ gitlab/containers
 
 ipfs/containers
 
+mongo/conatainers
+
 nginx/containers
-nginx/nginx.conf
+nginx/src/nginx.conf
 
 qbitTorrent/containers
 

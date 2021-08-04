@@ -1,4 +1,10 @@
 version: '3.8'
+
+networks:
+  nginx_network:
+    external:
+      name: nginx_network
+
 services:
   ipfs:
     image: ipfs/go-ipfs:latest
@@ -10,8 +16,11 @@ services:
       - ./containers/ipfs:/ipfs
     restart: always
     ports:
+      - "5001:5001"
       - "4001:4001"
       - "8081:8080"
+    networks:
+      - nginx_network
 
   ipfs_private:
     image: ipfs/go-ipfs:latest

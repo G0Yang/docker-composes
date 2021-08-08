@@ -7,7 +7,6 @@ ipfs/containers
 mongo/conatainers
 
 nginx/containers
-nginx/src/nginx.conf
 
 qbitTorrent/containers
 

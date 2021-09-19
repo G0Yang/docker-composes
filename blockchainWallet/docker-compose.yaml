@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  blockchainWalletApi:
+    build: Dockerfile
+    container_name: blockchainWalletApi
+  #gitlab:
+    #image: gitlab/gitlab-ce:latest
+    #container_name: gitlab
+    #volumes:

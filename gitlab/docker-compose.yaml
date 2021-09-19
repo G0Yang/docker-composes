@@ -1,4 +1,10 @@
 version: "3.8"
+
+networks:
+  nginx_network:
+    external:
+      name: nginx_network
+
 services:
   gitlab:
     image: gitlab/gitlab-ce:latest
@@ -8,9 +14,11 @@ services:
 #      GITLAB_OMNIBUS_CONFIG: |
 #        external_url 'http://gy.docker.compose.io:8929'
 #        gitlab_rails['gitlab_shell_ssh_port'] = 2224
-    ports:
-      - '80:80'
-      - '443:443'
+#    ports:
+#      - '80:80'
+#      - '443:443'
+    networks:
+      - nginx_network
     volumes:
       - './containers/gitlab/config:/etc/gitlab'
       - './containers/gitlab/logs:/var/log/gitlab'

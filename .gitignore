@@ -11,3 +11,5 @@ nginx/containers
 qbitTorrent/containers
 
 youtube-dl/containers
+
+blockchainWallet/blockchainWallet/node_modules

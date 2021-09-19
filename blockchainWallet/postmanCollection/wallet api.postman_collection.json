@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "91705dd4-6cfe-408f-b4d4-11fa491ffd3e",
+		"name": "wallet api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "generateMnemonic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/generateMnemonic?strength=128&language=english",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"generateMnemonic"
+					],
+					"query": [
+						{
+							"key": "strength",
+							"value": "128",
+							"description": "128=12wards, 160=15wards,  192=18wards, 224=21wards, 256=24wards"
+						},
+						{
+							"key": "language",
+							"value": "english",
+							"description": "korean,  english, ..."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validMnemonic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mnemonic\": \"감수성 의원 아저씨 언덕 도저히 저축 화면 침대 색깔 질병 평일 큰아들\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/validMnemonic",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"validMnemonic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mnemonicToSeed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mnemonic\": \"very submit viable win vast coconut hair engage identify fire giraffe broken\",\n    \"password\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/mnemonicToSeed",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"mnemonicToSeed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "entropyToMnemonic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entropy\": \"f2fb03cd7daf1a59da1252708ae5888e\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/entropyToMnemonic",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"entropyToMnemonic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "convertBip32",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seed\": \"509d348472709f5d14e6e5945a891d4fa1110f350a7fffddf608a27bebca48cd0b491e3393a1cc1e603474a989473c5bf7f03c0be22938874585c1e51bafda4a\", \n    \"base58\": \"xprv9s21ZrQH143K3AwtKYGfndtsqxCsPB94b61UPNG9r4fyBfRE8FxMvPthVsSQJzV1DvfV4ab39KwRKABSBt5qJu3EWgZffbjKF5nv1r5yJrU\", \n    \"publicKey\": \"039967acbf5191ecbc4dbd85a278d12c8507eeabb5cf2c962f2c155cf68f932217\", \n    \"privateKey\": \"454a6c8a8a816eb71f5593a99d483e876a368d88057c4a09317dc8f2167a6f78\", \n    \"chainCode\": \"6fda8ea3ee7eca4a9e46db5006cbdccd1a6e77796f5860eee0402c1bca3f9f45\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/convertBip32",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"convertBip32"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

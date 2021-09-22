@@ -1,10 +1,14 @@
 version: "3.8"
 
 services:
-  blockchainWalletApi:
-    build: Dockerfile
-    container_name: blockchainWalletApi
-  #gitlab:
+  blockchain-wallet-api:
+    build: .
+    container_name: blockchain-wallet-api
+    image: blockchain-wallet-api
+    environment:
+      - PORT=3001
+    ports:
+      - 3000:3001
     #image: gitlab/gitlab-ce:latest
     #container_name: gitlab
     #volumes:

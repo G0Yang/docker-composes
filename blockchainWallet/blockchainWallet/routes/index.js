@@ -4,6 +4,7 @@ const router = express.Router();
 const mnemonic = require("../src/mnemonic/mnemonic");
 const seed = require("../src/seed/seed");
 const derivation = require("../src/derivation/derivation");
+const weissCryptoRatings = require("../src/WeissCryptoRatings/weissCryptoRatings");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -16,5 +17,6 @@ router.post("/entropyToMnemonic", mnemonic.postEntropyToMnemonic);
 
 router.post("/mnemonicToSeed", seed.postMnemonicToSeed);
 router.post("/convertBip32", derivation.postConvertBip32);
+router.get("/cryptoGrade", weissCryptoRatings.getAxios, weissCryptoRatings.getCryptoGrade);
 
 module.exports = router;

@@ -16,3 +16,4 @@ blockchainWallet/blockchainWallet/node_modules
 
 pyEther/.env
 pyEther/result.txt
+pyEther/pyEtherVenv/lib

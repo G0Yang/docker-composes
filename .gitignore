@@ -13,3 +13,6 @@ qbitTorrent/containers
 youtube-dl/containers
 
 blockchainWallet/blockchainWallet/node_modules
+
+pyEther/.env
+pyEther/result.txt

@@ -1,0 +1,1 @@
+b'\n\x8c\xc2\x0f\x05\xe6?\xe2\xd2\x8261K\xb6\x0c*\xc5\x81\x05NJ\x1b\xc0A)\xc1\xbb=%FI\xbc'{'nonce': 0, 'to': '0x77046D239429166a3800d4CD8a0ddc8CD65ca7aF', 'value': 199036538621519000, 'gasPrice': 45379113261, 'gas': 21000}

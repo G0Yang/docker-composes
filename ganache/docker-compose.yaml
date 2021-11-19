@@ -2,9 +2,15 @@ version: '3.8'
 
 services:
   ganache:
-    image: ganache
-    container_name: ganache
-    restart: always
+    image: trufflesuite/ganache-cli:latest
     ports:
-      - "8545:8545"
-    command: ganache-cli -v --debug --port 8545 --host '0.0.0.0' --mnemonic 'response craft smile lecture vehicle patch theme accident subject gate this what' --gasPrice 20 --gasLimit 30 --networkId 7554 --chainId 1 --blockTime --defaultBalanceEther 123
+      - 8545:8545
+    entrypoint:
+      - node
+      - ./ganache-core.docker.cli.js
+      #- --mnemonic=
+      - --host=0.0.0.0
+      - --port=8545
+      - --gasLimit=7992181
+      - --gasPrice=1000000000
+      - --defaultBalanceEther=1000

@@ -3,14 +3,16 @@ version: '3.8'
 services:
   ganache:
     image: trufflesuite/ganache-cli:latest
+    container_name: ganache
     ports:
-      - 8545:8545
+      - 7545:${PORT}
     entrypoint:
       - node
       - ./ganache-core.docker.cli.js
-      #- --mnemonic=
-      - --host=0.0.0.0
-      - --port=8545
+      - --mnemonic="${MNEMONIC}"
+      - --host=${HOST}
+      - --port=${PORT}
       - --gasLimit=7992181
       - --gasPrice=1000000000
       - --defaultBalanceEther=1000
+      - --networkId=5777

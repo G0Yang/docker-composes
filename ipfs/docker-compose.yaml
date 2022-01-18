@@ -21,13 +21,3 @@ services:
       - "8081:8080"
     networks:
       - nginx_network
-
-  ipfs_private:
-    image: ipfs/go-ipfs:latest
-    container_name: ipfs-private
-    environment:
-      - IPFS_PROFILE=server
-      - IPFS_PATH=/ipfs_private
-    volumes:
-      - ./containers/ipfs_private:/ipfs_private
-    restart: always

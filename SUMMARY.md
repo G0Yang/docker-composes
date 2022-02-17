@@ -1,18 +1,43 @@
 # Table of contents
 
-* [Hello World](README.md)
-* [README.md](readme.md.md)
-* [Usage](usage.md)
+* [README](README.md)
 
-## Sub Projects
+## blockchainWallet
 
-* [BlockchainWallet](sub-projects/blockchainwallet.md)
-* [Ganache](sub-projects/ganache.md)
-* [Geth](sub-projects/geth.md)
-* [Gitlab](sub-projects/gitlab.md)
-* [IPFS](sub-projects/ipfs.md)
-* [Mongo](sub-projects/mongo.md)
-* [Nginx](sub-projects/nginx.md)
-* [PyEther](sub-projects/pyether.md)
-* [QbitTorrent](sub-projects/qbittorrent.md)
-* [Youtube-dl](sub-projects/youtube-dl.md)
+* [BlockchainWallet](blockchainwallet/blockchainwallet.md)
+
+## gitlab
+
+* [Gitlab](gitlab/gitlab.md)
+
+## ganache
+
+* [Ganache](ganache/ganache.md)
+
+## ipfs
+
+* [IPFS](ipfs/ipfs.md)
+
+## mongo
+
+* [Mongo](mongo/mongo.md)
+
+## geth
+
+* [Geth](geth/geth.md)
+
+## nginx
+
+* [Nginx](nginx/nginx.md)
+
+## youtube-dl
+
+* [Youtube-dl](youtube-dl/youtube-dl.md)
+
+## qbitTorrent
+
+* [QbitTorrent](qbittorrent/qbittorrent.md)
+
+## pyEther
+
+* [PyEther](pyether/pyether.md)
